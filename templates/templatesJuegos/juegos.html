@@ -17,37 +17,32 @@
 
   <body class="container mt-5">
     <div class="alert alert-info display-1 text-center">
-      <img src="{% static 'imagenes/logo.png' %}" width="100px" alt="" /> Juegos
+      <img src="{% static 'imagenes/logoJuegos.png' %}" width="100px" alt="" /> Juegos
       God
     </div>
     <div class="alert alert-dark display-3">{{titulo}}</div>
     <div class="row">
       <div class="col">
         <a href="#" class="btn p-3 btn-info w-100"
-          ><img
-            src="{% static 'imagenes/producto.jpg' %}"
-            width="100px"
-            alt=""
-          /><br />{{producto1}}</a
+          ><br />{{tipo}}</a
         >
       </div>
       <div class="col">
         <a href="#" class="btn p-3 btn-success w-100"
-          ><img
-            src="{% static 'imagenes/producto.jpg' %}"
-            width="100px"
-            alt=""
-          /><br />{{producto2}}</a
+          
+          ><br />{{plataforma}}</a
         >
       </div>
       <div class="col">
         <a href="#" class="btn p-3 btn-warning w-100"
-          ><img
-            src="{% static imagen %}"
-            width="100px"
-            alt=""
-          /><br />{{producto3}}</a
+          
+          ><br />{{peso}}</a
         >
+        <div class="col">
+            <a href="#" class="btn p-3 btn-success w-100"
+              
+              ><br />{{multijugador}}</a
+            >
       </div>
     </div>
     <a href="/" class="btn btn-info mt-5">Volver</a>

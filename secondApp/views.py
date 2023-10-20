@@ -6,30 +6,30 @@ def indexApp2(request):
 def valorant(request):
     data={
         "titulo":"Valorant",
-        'producto1':"MAC",
-        'producto2':"Celular",
-        'producto3':"PlayStation",
-        'url':'/www.inacap.cl',
+        'tipo':"tipo FPS.",
+        'plataforma':"PC",
+        'peso':"23 GB Aprox",
+        'multijugador':"Si cuenta con multijugador",
         'imagen':'imagenes/producto.jpg'
     }
-    return render(request,'templatesProductos/productos.html',data)
+    return render(request,'templatesJuegos/juegos.html',data)
 
 def lol(request):
     data={
         "titulo":"League of Legends",
-        'producto1':"Pelota",
-        'producto2':"Figura de Acción",
-        'producto3':"Juego de Mesa",
-        'imagen':'imagenes/producto.jpg'
+        'tipo':"MMORPG",
+        'plataforma':"PC",
+        'peso':"15 GB aprox",
+        'multijugador': "si cuenta con multijugador"
     }
-    return render(request,'templatesProductos/productos.html',data)
+    return render(request,'templatesJuegos/juegos.html',data)
 
 def aoe(request):
     data={
         "titulo":"Age of Empires 2",
-        'producto1':"Polera",
-        'producto2':"Chaqueta",
-        'producto3':"Zapatilla",
-        'imagen':'imagenes/producto.jpg'
+        'tipo':"Estrategia",
+        'plataforma':"PC",
+        'peso':"30 GB Aprox",
+        'multijugador': "Si cuenta con multijugador"
     }
-    return render(request,'templatesProductos/productos.html',data)
+    return render(request,'templatesJuegos/juegos.html',data)
