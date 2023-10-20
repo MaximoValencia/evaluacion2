@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-def index(request):
-    return render(request,'templatesJuegos/index.html')   
+def indexApp2(request):
+    return render(request,'templatesJuegos/indexApp2.html')   
 
 def valorant(request):
     data={

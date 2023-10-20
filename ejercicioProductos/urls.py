@@ -24,6 +24,7 @@ urlpatterns = [
     path("juguetes/",juguetes),
     path("electronica/",electronica),
     path("ropa/",ropa),
+    path("app2/",indexApp2),
     path("valorant/",valorant),
     path("league-of-legends/",lol),
     path("age-of-empires/",aoe),
