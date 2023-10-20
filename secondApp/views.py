@@ -1,35 +1,36 @@
 from django.shortcuts import render
 
-def indexApp2(request):
-    return render(request,'templatesJuegos/indexApp2.html')   
+from django.shortcuts import render
 
-def valorant(request):
-    data={
-        "titulo":"Valorant",
-        'tipo':"tipo FPS.",
-        'plataforma':"PC",
-        'peso':"23 GB Aprox",
-        'multijugador':"Si cuenta con multijugador",
-        'imagen':'imagenes/producto.jpg'
-    }
-    return render(request,'templatesJuegos/juegos.html',data)
+def indexApp2(request, juego_id):
+    juego = None
 
-def lol(request):
-    data={
-        "titulo":"League of Legends",
-        'tipo':"MMORPG",
-        'plataforma':"PC",
-        'peso':"15 GB aprox",
-        'multijugador': "si cuenta con multijugador"
-    }
-    return render(request,'templatesJuegos/juegos.html',data)
+    if juego_id == 'valorant':
+        juego = {
+            "titulo": "Valorant",
+            "tipo": "FPS",
+            "plataforma": "PC",
+            "peso": "23 GB Aprox",
+            "multijugador": "Sí cuenta con multijugador",
+            "imagen": 'imagenes/valorant.jpg',
+        }
+    elif juego_id == 'lol':
+        juego = {
+            "titulo": "League of Legends",
+            "tipo": "MOBA",
+            "plataforma": "PC",
+            "peso": "Varía",
+            "multijugador": "Sí cuenta con multijugador",
+            "imagen": 'imagenes/lol.jpg',
+        }
+    elif juego_id == 'aoe':
+        juego = {
+            "titulo": "Age of Empires",
+            "tipo": "Estrategia",
+            "plataforma": "PC",
+            "peso": "Varía",
+            "multijugador": "Sí cuenta con multijugador",
+            "imagen": 'imagenes/aoe.jpg',
+        }
 
-def aoe(request):
-    data={
-        "titulo":"Age of Empires 2",
-        'tipo':"Estrategia",
-        'plataforma':"PC",
-        'peso':"30 GB Aprox",
-        'multijugador': "Si cuenta con multijugador"
-    }
-    return render(request,'templatesJuegos/juegos.html',data)
+    return render(request, 'secondApp/indexApp2.html', {'juego': juego})

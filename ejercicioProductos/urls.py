@@ -25,7 +25,5 @@ urlpatterns = [
     path("electronica/",electronica),
     path("ropa/",ropa),
     path("app2/",indexApp2),
-    path("valorant/",valorant),
-    path("lol/",lol),
-    path("aoe/",aoe),
+
 ]
